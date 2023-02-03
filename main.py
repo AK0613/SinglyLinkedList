@@ -12,7 +12,7 @@ class LinkedList:
         self.count = 0
 
     def insert_back(self, data):
-        '''Inserts new values at the end of the linked list'''
+        '''Inserts elements at the end of the linked list'''
         newNode = Node(data)
         if self.head:
             current = self.head
@@ -38,7 +38,6 @@ class LinkedList:
         '''Inserts elements into the linked list at a specific index'''
         newNode = Node(data)
         current = self.head
-        # print(data, index)
         if self.count >= index:
             for i in range(0, index - 2):  # -2 to offset starting from 0 and to land on the previous node
                 current = current.next
@@ -108,6 +107,7 @@ def reverse_list(list):
 
 __name__ = "__main__"
 
+# Testing values
 list = LinkedList()
 list.insert_back(3)
 list.insert_back(5)
