@@ -12,6 +12,7 @@ class LinkedList:
         self.count = 0
 
     def insert_back(self, data):
+        '''Inserts new values at the end of the linked list'''
         newNode = Node(data)
         if self.head:
             current = self.head
@@ -23,6 +24,7 @@ class LinkedList:
         self.count += 1
 
     def insert_front(self, data):
+        '''Inserts elements into the linked list from the front'''
         newNode = Node(data)
         if self.head:
             temp = self.head
@@ -33,6 +35,7 @@ class LinkedList:
         self.count += 1
 
     def insert_at(self, data, index):
+        '''Inserts elements into the linked list at a specific index'''
         newNode = Node(data)
         current = self.head
         # print(data, index)
@@ -46,6 +49,7 @@ class LinkedList:
         self.count += 1
 
     def delete_value(self, data):
+        '''Deletes a specific value in the linked list'''
         if self.count >= 1:
             current = self.head
             # If the list has one element and it matches.
@@ -64,6 +68,7 @@ class LinkedList:
             print('The list is empty. No values were deleted')
 
     def delete_index(self, index):
+        '''Deletes the item at the given index'''
         if self.count >= 1:
             if self.count >= index:
                 current = self.head
@@ -81,6 +86,7 @@ class LinkedList:
             print('The list is empty. No values were deleted')
 
     def print(self):
+        '''Prints the linked list'''
         current = self.head
         while current:
             print(current.value)
@@ -88,6 +94,7 @@ class LinkedList:
 
 
 def reverse_list(list):
+    '''Returns a copy of the given linked list but in reverse'''
     new_list = LinkedList()
     current = list.head
     if list.count > 1:
@@ -98,6 +105,8 @@ def reverse_list(list):
         return list
     return new_list
 
+
+__name__ = "__main__"
 
 list = LinkedList()
 list.insert_back(3)
